@@ -1,0 +1,5 @@
+<div *ngIf="action">
+  {{action.info}}
+  <input type="text" [(ngModel)]="actionData">
+  <input type="button" value="answer" class="btn btn-info" (click)="submitAction()">
+</div>
