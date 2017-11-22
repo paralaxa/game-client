@@ -1,8 +1,8 @@
-<div style="height: 96px; border:1px solid #09d" class="col-sm-1 d-inline-block m-1"
+<div  class="field"
      [style.color]="field.piece?'red':'black'" droppable
-     (onDrop)="onItemDrop($event)">
+     (onDrop)="onItemDrop($event)" [dropScope]="dropScope" [dragHintClass]="'drag-hint'">
   &nbsp;
-  <div draggable [dragData]="field.piece">
+  <div draggable [dragData]="field.piece" [dragScope]="dragScope">
     <app-piece [piece]="field.piece"></app-piece>
   </div>
 </div>

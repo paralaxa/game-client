@@ -2,7 +2,7 @@
   <div class="row">
     <input type="button" value="startGame" class="btn btn-primary" (click)="startGame()">
     <input type="button" value="getBoard" class="btn btn-info" (click)="getBoard()">
-    <input type="text" [(ngModel)]="playername">
+    <input type="text" [(ngModel)]="playername" placeholder="playerName">
   </div>
 </div>
 <div *ngIf="board">

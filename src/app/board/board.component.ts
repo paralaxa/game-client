@@ -28,9 +28,13 @@ export class BoardComponent implements OnInit {
     event.field.piece = event.piece;
   }
 
-  onActionFound() {
-    this.rest.getAction(this.gameId).subscribe((resp) => {
-      this.action = resp;
-    });
+  onActionStateChanged(actionFound: boolean) {
+    if (actionFound) {
+      this.rest.getAction(this.gameId).subscribe((resp) => {
+        this.action = resp;
+      });
+    } else {
+      this.action = null;
+    }
   }
 }

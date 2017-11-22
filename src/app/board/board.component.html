@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="row">
+<div class="mycontainer">
+  <div class="myrow">
     <app-field *ngFor="let boardField of fields" [field]="boardField" (draggedTo)="onDraggedToField($event)"
-               (actionFound)="onActionFound()" [gameId]="gameId"></app-field>
+               (actionStateChanged)="onActionStateChanged($event)" [gameId]="gameId"></app-field>
     <app-action [action]="action" [gameId]="gameId"></app-action>
   </div>
 </div>
